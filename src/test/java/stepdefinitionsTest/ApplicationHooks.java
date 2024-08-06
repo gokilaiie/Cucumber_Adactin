@@ -1,4 +1,4 @@
-package appHooks;
+package stepdefinitionsTest;
 
 import java.util.Properties;
 
@@ -13,24 +13,26 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-public class MyHooks 
+public class ApplicationHooks 
 {
 	private DriverFactory driverfactory;
 	private WebDriver driver;
 	private ConfigReader configReader;
 	Properties prop;
 	
-	@Before(order = 0)
-	private void getproperty()
+	@Before(order=0)
+	public void getproperty()
 	{
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
+		System.out.println("properties init");		
 		
 		
 	}
 	@Before(order=1)
 	public void launchbrowser()
 	{
+
 		String browserNm = prop.getProperty("browser");
 		System.out.println(browserNm);		
 		driverfactory = new DriverFactory();

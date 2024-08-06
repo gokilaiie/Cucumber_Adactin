@@ -7,7 +7,7 @@ When User get the title of the Page
 Then Title of the Page should be "Adactin.com - Hotel Reservation System"
 When User enters "<username>" and "<password>"
 And User clicks on Login button
-Then User is onthe HomePage
+When User get the title of the Page
 
 	Examples: 
 			|    username   | password |  

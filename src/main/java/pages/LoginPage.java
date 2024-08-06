@@ -44,4 +44,13 @@ public class LoginPage
 	 {
 		 return driver.findElement(FrgtPwd).isDisplayed();
 	 }
+	 
+	 public SearchHotelPage doLogin(String un, String pd)
+	 {
+		 System.out.println("login with: " + un + " and " + pd);
+		 driver.findElement(username).sendKeys(un);
+		 driver.findElement(password).sendKeys(pd);
+		 driver.findElement(LoginBtn).click();
+		 return new SearchHotelPage(driver);
+	 }
 }

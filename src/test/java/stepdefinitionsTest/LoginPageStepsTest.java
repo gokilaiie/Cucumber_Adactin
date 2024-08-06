@@ -48,11 +48,7 @@ public class LoginPageStepsTest
 	    LoginPage.clickLogin();
 	}
 
-	@Then("User is onthe HomePage")
-	public void user_is_onthe_home_page() 
-	{
-	    
-	}
+	
 
 
 

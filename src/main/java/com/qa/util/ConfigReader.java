@@ -14,7 +14,8 @@ public class ConfigReader
 		prop = new Properties();
 		//FileInputStream ip;
 		try {
-			FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
+			
+			FileInputStream ip = new FileInputStream("C:\\Users\\gokil\\eclipse-workspace\\Hotel_Adactin_Cucumber\\src\\test\\resources\\config\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
